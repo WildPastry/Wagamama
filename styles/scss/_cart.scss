@@ -1,0 +1,157 @@
+//IMPORT PARTIALS
+@import 'variables';
+@import 'mixins';
+
+// SHOPPING CART
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.modal-header .close {
+    margin-top: -2px
+}
+
+.modal-open {
+    overflow: hidden
+}
+
+.modal-dialog {
+    width: 550px;
+    margin: 30px auto
+}
+
+.modal-title {
+    padding-left: 30px;
+    margin: 0;
+    line-height: 1.42857143
+}
+
+.modal-body {
+    position: relative;
+    padding: 15px
+}
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5
+}
+
+#my-cart-modal {
+    padding-right: 0 !important;
+}
+
+.badge {
+    padding: 9px 11px;
+    font-family: $font-lgt;
+    letter-spacing: $spc;
+}
+
+.badge-notify {
+    background: $red;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.fa-shopping-cart {
+    cursor: pointer;
+}
+
+#my-cart-table {
+    width: 100%;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 20px 10px;
+    border-top: $lgry;
+    font-family: $font-reg;
+    font-size: $hdg-5;
+    letter-spacing: $spc;
+    vertical-align: middle;
+}
+
+.my-product-quantity {
+    padding-left: 10px;
+}
+
+.my-product-total {
+    width: 90px
+}
+
+.alert {
+    margin-bottom: 0;
+}
+
+.alert-danger {
+    color: $red;
+    padding-left: 30px;
+}
+
+// SHOPPING CART (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .badge {
+        padding: 6px 8px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .badge {
+        padding: 4px 6px;
+    }
+
+    .modal-dialog {
+        width: 95%;
+        min-width: 225px;
+        margin: 10px auto;
+    }
+
+    .table>tbody>tr>td,
+    .table>tbody>tr>th,
+    .table>tfoot>tr>td,
+    .table>tfoot>tr>th,
+    .table>thead>tr>td,
+    .table>thead>tr>th {
+        padding: 10px 5px;
+        font-family: $font-lgt;
+        font-size: $bdy-mob;
+    }
+
+    .modal-title {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .table>tbody>tr>td,
+    .table>tbody>tr>th,
+    .table>tfoot>tr>td,
+    .table>tfoot>tr>th,
+    .table>thead>tr>td,
+    .table>thead>tr>th {
+        padding: 7px 2px;
+    }
+
+}

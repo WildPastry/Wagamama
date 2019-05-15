@@ -1,0 +1,59 @@
+//IMPORT PARTIALS
+@import 'variables';
+@import 'mixins';
+
+// FOOTER
+.footer {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+.footer__copyright {
+    height: 60px;
+}
+
+.footer p {
+    @include fontProperties($font-lgt, $bdy, $spc, $wht);
+}
+
+.footer__info {
+    margin: $ftr-mar;
+}
+
+.footer__info--copyright {
+    margin: $ftr-mar-cpy;
+}
+
+// FOOTER (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .footer {
+        height: 100px;
+    }
+
+    .footer__copyright {
+        height: 60px;
+    }
+    
+    .footer__info {
+        margin: $ftr-mar-tab;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .footer {
+        height: 60px;
+    }
+
+    .footer__info {
+        margin: $ftr-mar-mob;
+    }
+
+    .footer p {
+        font-size: $bdy-mob;
+    }
+}

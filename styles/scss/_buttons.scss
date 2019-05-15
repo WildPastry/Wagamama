@@ -1,0 +1,104 @@
+//IMPORT PARTIALS
+@import 'variables';
+@import 'mixins';
+
+//BUTTONS
+.btn__container {
+    margin: $main-mar;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 120px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    padding: $btn-pad;
+    margin: $btn-mar;
+    border-radius: $radius;
+    @include fontProperties($font-reg, $bdy, $spc, $wht);
+    text-align: center;
+}
+
+.btn__noMargin {
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.btn a {
+    color: $wht;
+}
+
+.btn--large {
+    width: 180px;
+}
+
+.btn--dgreen:hover {
+    background-color: $wht;
+    color: $d-grn;
+}
+
+.btn--red {
+    background-color: $red;
+}
+
+.btn--wht {
+    background-color: $wht;
+}
+
+.btn--pch {
+    background-color: $pch;
+}
+
+.btn--grn {
+    background-color: $grn;
+}
+
+.btn--dgreen {
+    background-color: $d-grn;
+}
+
+.btn--red:hover {
+    background-color: $pch;
+}
+
+.btn--pch:hover {
+    background-color: $red;
+}
+
+.btn--grn:hover {
+    background-color: $d-grn;
+}
+
+// BUTTONS (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .btn {
+        width: 120px;
+        height: 45px;
+        padding: 13px;
+        font-size: $bdy-mob;
+    }
+
+    .btn--large {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .btn {
+        width: 108px;
+        height: 40px;
+        padding: 10px;
+        font-size: $bdy-mob;
+    }
+
+    .btn--large {
+        width: 140px;
+    }
+}

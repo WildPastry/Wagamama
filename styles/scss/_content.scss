@@ -1,0 +1,515 @@
+//IMPORT PARTIALS
+@import 'variables';
+@import 'mixins';
+
+// LAYOUT
+
+// MAIN LAYOUT
+.container {
+    height: 100%;
+    padding-top: 120px;
+}
+
+// START PAGE LAYOUT
+.container__start {
+    max-width: $main-wdth;
+    margin: $main-mar;
+}
+
+// HELP PAGE LAYOUT
+.container__help {
+    padding-bottom: 80px;
+    max-width: $main-wdth;
+    margin: $main-mar;
+}
+
+// MENU PAGE LAYOUT
+.container__menu {
+    padding-bottom: 80px;
+    max-width: $main-wdth;
+    margin: $main-mar;
+}
+
+.container__menu img {
+    width: 300px;
+    height: 237px;
+}
+
+.container__menu--control {
+    height: 80px;
+    width: 260px;
+    text-align: center;
+    margin: $main-mar;
+    padding: $menu-pad;
+    margin-top: 20px;
+}
+
+// MENU DESCRPTION HOVER
+.hidden__text {
+    display: none;
+    z-index: 100;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 15px;
+    margin-top: 97px;
+    cursor: context-menu;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu:hover .hidden__text {
+    display: block;
+}
+
+.menu:hover .full {
+    margin: 0 auto;
+}
+
+.menu:hover .border__text {
+    display: none;
+    visibility: hidden;
+}
+
+.menu:hover img {
+    display: none;
+    visibility: hidden;
+}
+
+.margin__bottom h5 {
+    text-align: center;
+}
+
+.menu:hover .full {
+    margin-left: 65px;
+    margin-top: 15px;
+}
+
+// MENU DESCRIPTION HOVER (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .hidden__text {
+        width: 180px;
+        height: 300px;
+        margin-top: 50px;
+    }
+
+    .menu:hover .full {
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .hidden__text {
+        width: 180px;
+        height: 300px;
+    }
+
+    .menu:hover .full {
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .hidden__text {
+        width: 300px;
+        height: 163px;
+        margin-top: 20px;
+    }
+
+    .menu:hover .full {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .hidden__text {
+        width: 270px;
+        height: 163px;
+    }
+
+    .menu:hover .full {
+        margin-left: 85px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .hidden__text {
+        width: 250px;
+        height: 163px;
+    }
+
+    .menu:hover .full {
+        margin-left: 75px;
+        margin-top: 5px;
+    }
+}
+
+// PAYMENT PAGE LAYOUT (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .payment h3 {
+        font-size: $hdg-tab;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .payment h3 {
+        font-size: $hdg-mob;
+    }
+}
+
+// MENU PAGE LAYOUT (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .container__menu img {
+        width: 200px;
+        height: 158px;
+    }
+
+    .container {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        height: 100%;
+        padding-top: 60px;
+    }
+
+    .container__start,
+    .container__pay {
+        padding-top: 80px;
+    }
+}
+
+// MAIN ROWS
+.row {
+    height: 50%;
+    width: 100%;
+}
+
+.row__flex {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.row--center {
+    width: 70%;
+    height: 100%;
+    max-width: $main-wdth;
+    margin: $main-mar;
+}
+
+.row--1 {
+    height: 100%;
+    width: 100%;
+}
+
+.row--2 {
+    width: 100%;
+}
+
+// MAIN COLUMNS
+.col {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.col::after {
+    clear: left;
+}
+
+.col--1 {
+    width: 100%;
+    height: 100%;
+}
+
+.col--2 {
+    width: 100%;
+    height: 50%;
+}
+
+.col--2--1 {
+    width: 50%;
+    height: 100%;
+}
+
+.col--3--1 {
+    width: 50%;
+    height: 100%;
+}
+
+.col--3--2 {
+    width: 33.333%;
+    height: 45%;
+}
+
+// MAIN ROWS & COLUMNS (MEDIA)
+@media screen and (max-width: 600px) {
+
+    .col--2--1 {
+        width: 100%;
+        height: 50%;
+    }
+
+    .col--3--1 {
+        width: 100%;
+        height: 45%;
+    }
+
+    .col--3--2 {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .col--margin {
+        margin-bottom: 50px;
+    }
+}
+
+// PAYMENT PAGES LAYOUT
+.container__pay {
+    padding-bottom: 80px;
+    max-width: $main-wdth;
+    margin: $main-mar;
+}
+
+.order {
+    height: auto;
+    width: 40%;
+    min-width: 225px;
+    border: $lgry;
+    background-color: $wht;
+    border-radius: 10px;
+    margin: $twty-mar;
+}
+
+.order__list li {
+    padding: 20px;
+    line-height: 5px;
+}
+
+.order__list--grey {
+    background-color: $gry;
+}
+
+.order__list--grey--rounded {
+    background-color: $gry;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.order__list--rounded {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.order__list--type select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 15px;
+    background: url('../../images/icons/caret.png') no-repeat;
+    background-position: 93% 45%;
+    @include fontProperties($font-reg, $hdg-5, $spc, $blk);
+    border: none;
+    width: 100%;
+}
+
+.order--type {
+    height: auto;
+    width: 32%;
+    min-width: 225px;
+    border-radius: 10px;
+    margin: $twty-mar;
+    background-color: $l-gry;
+}
+
+// FORM
+.credit-card {
+    display: flex;
+    justify-content: center;
+    width: 32%;
+    min-width: 225px;
+    height: auto;
+    margin: $twty-mar;
+    border-radius: 10px;
+    background-color: $wht;
+}
+
+.form-body {
+    height: auto;
+    padding: 25px;
+}
+
+// COMMON
+.card-number,
+.cvv-input input,
+.month select,
+.paypal-btn,
+.proceed-btn,
+.year select {
+    height: 40px;
+}
+
+.card-number,
+.month select,
+.year select {
+    font-size: $bdy;
+}
+
+.card-number,
+.cvv-details,
+.cvv-input input,
+.month select,
+.year select {
+    color: $blk;
+}
+
+// NUMBER AND NAME
+.card-number {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: $lgry;
+    border-radius: 10px;
+}
+
+// DATE
+.month select,
+.year select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 145px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: $lgry;
+    color: $d-gry;
+    border-radius: 10px;
+    background: url('../../images/icons/caret.png') no-repeat;
+    background-position: 85% 50%;
+}
+
+.month select {
+    float: left;
+}
+
+.year select {
+    float: right;
+}
+
+// CVV
+.cvv-input input {
+    width: 145px;
+    float: left;
+    padding-left: 20px;
+    border: $lgry;
+    border-radius: 10px;
+    background: $wht;
+}
+
+.cvv-details {
+    float: right;
+    font-size: $bdy;
+    line-height: 16px;
+}
+
+.cvv-input input {
+    clear: left;
+}
+
+.cvv-details {
+    clear: right;
+}
+
+.cvv-details p {
+    line-height: 20px;
+}
+
+// FORM (MEDIA)
+@media screen and (max-width: 1100px) {
+
+    .cvv-details p {
+        margin-top: 20px;
+    }
+
+    .cvv-input input {
+        float: none;
+    }
+
+    .cvv-details {
+        float: none;
+    }
+
+    .month select {
+        width: 100%;
+    }
+
+    .year select {
+        width: 100%;
+    }
+
+    .month select,
+    .year select {
+        background-position: 90% 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .order__list--type select {
+        padding: 15px;
+        line-height: 15px;
+        background-position: 90% 50%;
+        font-size: $bdy;
+    }
+
+    .order--type {
+        margin-bottom: 10px;
+    }
+
+    .credit-card {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .cvv-input input {
+        width: 100%;
+    }
+}
+
+// SPLIT BILL SELECTABLE LIST
+.selectable .ui-selecting {
+    background: $l-grn;
+}
+
+.selectable .ui-selected {
+    background: $l-grn;
+}
+
+.selectable:hover {
+    cursor: pointer;
+}
+
+.ui-widget-content {
+    border: none;
+}

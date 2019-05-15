@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Credit Card Details</title>
+    <link rel="shortcut icon" href="images/brand/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/css/MyFontsWebfontsKit.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css">
+</head>
+
+<body>
+
+    <!-- BRAND -->
+    <header class="brand brand--large brand--black">
+        <div class="brand__tiny">
+            <a href="index.html">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 1328 1260.1" style="enable-background:new 0 0 1328 1260.1;" xml:space="preserve">
+                    <path class="icon--red" d="M1328,777.1H822.5l-158.5,483l-158.4-483H0L407.5,483L256.5,0L664,301.8L1071.5,0L920.7,483L1328,777.1z
+                    M1328,777.1" />
+                </svg>
+            </a>
+        </div>
+        <div class="brand__icons">
+            <a href="card.html"> <i class="fas fa-arrow-circle-left"></i></a>
+            <a href="help.html"> <i class="fas fa-user-ninja"></i></a>
+            <i class="fas fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></i>
+        </div>
+        <div class="brand__logo--large"><a href="index.html"><img src="images/brand/wagamama-logo-white.svg" alt="Wagamama Logo"></a></div>
+    </header>
+
+    <!-- BACKGROUND -->
+    <div id="background" class="background__solid--blk"></div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container container__pay">
+
+        <div class="row__flex margin__top--large">
+
+            <!-- ORDER ICON -->
+            <div class="col col--1">
+
+                <!-- ORDER SUMMARY -->
+                <div class="margin__top payment">
+                    <h2>PAYMENT DETAILS</h2>
+                    <hr class="ruler ruler--peach">
+                    <h4 class="margin__bottom">Total: $103.5</h4>
+                </div>
+
+                <!-- SAVED CARD -->
+                <div class="order--type">
+                    <div class="order__list--type">
+                        <select name="card" autocomplete='off' required>
+                            <option value="" disabled selected hidden>SAVED CARD</option>
+                            <option value="2">Card ending 8765</option>
+                            <option value="3">Card ending 2366</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- CARD TYPE -->
+                <div class="order--type">
+                    <div class="order__list--type">
+                        <select name="card" autocomplete='off' required>
+                            <option value="" disabled selected hidden>CARD TYPE</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="amex">Amex</option>
+                            <option value="diners">Diners</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- CARD DETAILS -->
+                <form class="credit-card">
+
+                    <div class="form-body">
+
+                        <!-- Card Number and Name -->
+                        <input type="text" class="card-number" placeholder="Cardholder Name" autocomplete='off'>
+                        <input type="text" class="card-number" placeholder="Card Number" maxlength="16" autocomplete='off'>
+
+                        <!-- Date Field -->
+                        <div class="date-field">
+                            <div class="month">
+                                <select name="Month" autocomplete='off'>
+                                    <option value="january">January</option>
+                                    <option value="february">February</option>
+                                    <option value="march">March</option>
+                                    <option value="april">April</option>
+                                    <option value="may">May</option>
+                                    <option value="june">June</option>
+                                    <option value="july">July</option>
+                                    <option value="august">August</option>
+                                    <option value="september">September</option>
+                                    <option value="october">October</option>
+                                    <option value="november">November</option>
+                                    <option value="december">December</option>
+                                </select>
+                            </div>
+                            <div class="year">
+                                <select name="Year" autocomplete='off'>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2024">2025</option>
+                                    <option value="2024">2026</option>
+                                    <option value="2024">2027</option>
+                                    <option value="2024">2028</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Card Verification Field -->
+                        <div class="card-verification">
+                            <div class="cvv-input">
+                                <input type="text" placeholder="CVV" maxlength="4" autocomplete='off'>
+                            </div>
+                            <div class="cvv-details">
+                                <p>3 or 4 digits found on <br> the back of the card</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- BUTTONS -->
+                <div class="btn__container">
+                    <a href="#" onClick="preventBack()">
+                        <div class="btn btn--red">Back</div>
+                    </a>
+                    <a href="payment.html">
+                        <div class="btn btn--grn">Pay $103.5</div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+<script src="js/jquery.mycart.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/main.js"></script>
+
+</html>

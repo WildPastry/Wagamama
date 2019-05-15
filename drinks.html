@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Drinks</title>
+    <link rel="shortcut icon" href="images/brand/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/css/MyFontsWebfontsKit.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css">
+</head>
+
+<body>
+
+    <!-- BRAND -->
+    <header class="brand brand--large brand--black">
+        <div class="brand__tiny">
+            <a href="index.html">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 1328 1260.1" style="enable-background:new 0 0 1328 1260.1;" xml:space="preserve">
+                    <path class="icon--red" d="M1328,777.1H822.5l-158.5,483l-158.4-483H0L407.5,483L256.5,0L664,301.8L1071.5,0L920.7,483L1328,777.1z
+                    M1328,777.1" />
+                </svg>
+            </a>
+        </div>
+        <div class="brand__icons">
+            <a href="#" onClick="preventBack()"> <i class="fas fa-arrow-circle-left"></i></a>
+            <a href="help.html"> <i class="fas fa-user-ninja"></i></a>
+            <i class="fas fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></i>
+        </div>
+        <div class="brand__logo--large"><a href="index.html"><img src="images/brand/wagamama-logo-white.svg" alt="Wagamama Logo"></a></div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container container__menu">
+
+        <!-- CONTENT -->
+        <div class="row--1">
+
+            <!-- HEADING AND PAGE CONTROLS -->
+            <div class="container__menu--control">
+                <div class="control--left">
+                    <a href="desserts.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: none;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="ic_chevron_left" transform="translate(-381 -78)">
+                                <rect class="cls-1" width="24" height="24" transform="translate(381 78)" />
+                                <path class="icon--black" d="M20.461,8.358,18.1,6,8,16.1l10.1,10.1,2.358-2.358L12.715,16.1Z"
+                                    transform="translate(379 73.545)" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="control--right">
+                    <a href="starters.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: none;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="ic_chevron_right" transform="translate(-433 -78)">
+                                <rect class="cls-1" width="24" height="24" transform="translate(433 78)" />
+                                <path class="icon--black" d="M8.6,8.327,10.927,6,20.9,15.973l-9.973,9.973L8.6,23.618l7.646-7.646Z"
+                                    transform="translate(429.842 73.693)" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <h3 class="control--pad">DRINKS</h3>
+            </div>
+
+            <!-- MENU ITEMS -->
+            <div class="col col--3--2 menu">
+                <img src="images/order/menu-items/drinks-1.jpg" alt="Beers">
+                <div class="hidden__text">
+                    <h5 class="margin__bottom align">Beers – $8</h5>
+                    <p class="align">Mac's Gold | Mac's Mid Vicious | Mac's Hoprocker Pilsner | Mac's Green Beret IPA |
+                        Mac's Interstate pale ale | Mac's 3 wolves pale ale | Mac's cloudy apple cider | Kirin |
+                        Steinlager Tokyo Dry</p>
+                    <button class="btn btn--grn btn-danger my-cart-btn full" data-id="19" data-name="Beers"
+                        data-summary="summary 19" data-price="8" data-quantity="1" data-image="images/img_1.png">Add
+                        to Order</button>
+                </div>
+                <div class="border__text">
+                    <h5>Beers</h5>
+                </div>
+            </div>
+
+            <div class="col col--3--2 menu">
+                <img src="images/order/menu-items/drinks-2.jpg" alt="Juices">
+                <div class="hidden__text">
+                    <h5 class="margin__bottom align">Juices – $8</h5>
+                    <p class="align">Pineapple, lime, spinach, cucumber and apple.</p>
+                    <button class="btn btn--grn btn-danger my-cart-btn full" data-id="20" data-name="Juices"
+                        data-summary="summary 20" data-price="8" data-quantity="1" data-image="images/img_1.png">Add
+                        to Order</button>
+                </div>
+                <div class="border__text">
+                    <h5>Juices</h5>
+                </div>
+            </div>
+            <div class="col col--3--2 menu">
+                <img src="images/order/menu-items/drinks-3.jpg" alt="Soft Drinks">
+                <div class="hidden__text">
+                    <h5 class="margin__bottom align">Soft Drinks – $4</h5>
+                    <p class="align">We have a refreshing range of soft drinks to quench your thirst. Still Water |
+                        Sparkling Water | Aloe Vera | Coke | Diet Coke | Coke No Sugar | Sprite | Ginger Beer | Lemon
+                        Lime Bitters | Peach Ice Tea</p>
+                    <button class="btn btn--grn btn-danger my-cart-btn full" data-id="21" data-name="Soft Drinks"
+                        data-summary="summary 21" data-price="4" data-quantity="1" data-image="images/img_1.png">Add
+                        to Order</button>
+                </div>
+                <div class="border__text">
+                    <h5>Soft Drinks</h5>
+                </div>
+            </div>
+            <div class="col col--3--2 menu">
+                <img src="images/order/menu-items/drinks-4.jpg" alt="Wine">
+                <div class="hidden__text">
+                    <h5 class="margin__bottom align">Wine – $8</h5>
+                    <p class="align">White, red, rose and plum wine. Our wines have been carefully chosen to enhance
+                        your enjoyment of the wagamama menu.</p>
+                    <button class="btn btn--grn btn-danger my-cart-btn full" data-id="22" data-name="Wine" data-summary="summary 22"
+                        data-price="8" data-quantity="1" data-image="images/img_1.png">Add
+                        to Order</button>
+                </div>
+                <div class="border__text">
+                    <h5>Wine</h5>
+                </div>
+            </div>
+            <div class="col col--3--2 menu">
+                <img src="images/order/menu-items/drinks-5.jpg" alt="Sake">
+                <div class="hidden__text">
+                    <h5 class="margin__bottom align">Sake – $9</h5>
+                    <p class="align">Traditional asian wines that taste great with wagamama rice and noodle dishes.</p>
+                    <button class="btn btn--grn btn-danger my-cart-btn full" data-id="23" data-name="Sake" data-summary="summary 23"
+                        data-price="9" data-quantity="1" data-image="images/img_1.png">Add
+                        to Order</button>
+                </div>
+                <div class="border__text">
+                    <h5>Sake</h5>
+                </div>
+            </div>
+            <div class="col col--3--2 col--margin menu">
+                <img src="images/order/menu-items/drinks-6.jpg" alt="Tea & Coffee">
+                <div class="hidden__text">
+                    <h5 class="margin__bottom align">Tea & Coffee – $4</h5>
+                    <p class="align">Our range of coffees and teas including green, black and herbal varieties, are
+                        great with our delicious desserts or as an extra treat at the end of your meal.</p>
+                    <button class="btn btn--grn btn-danger my-cart-btn full" data-id="24" data-name="Tea & Coffee"
+                        data-summary="summary 24" data-price="8" data-quantity="1" data-image="images/img_1.png">Add
+                        to Order</button>
+                </div>
+                <div class="border__text">
+                    <h5>Tea & Coffee</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="js/jquery.mycart.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

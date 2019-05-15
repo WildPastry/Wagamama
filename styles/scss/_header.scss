@@ -1,0 +1,106 @@
+//IMPORT PARTIALS
+@import 'variables';
+@import 'mixins';
+
+// BRAND NAV
+.brand {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand--black {
+    background-color: $blk;
+}
+
+.brand__logo {
+    width: 160px;
+    height: 40px;
+    margin: 10px auto;
+}
+
+.brand__logo img {
+    width: 160px;
+}
+
+// BRAND NAV LARGE
+.brand--large {
+    height: 120px;
+}
+
+.brand__logo--large {
+    width: 280px;
+    height: 80px;
+    margin: 20px auto;
+}
+
+.brand__logo--large img {
+    width: 280px;
+}
+
+// BRAND NAV (INDEX PAGE ONLY)
+.brand__index {
+    width: 160px;
+    height: 40px;
+    margin: 10px auto;
+    display: none;
+    visibility: hidden;
+}
+
+.brand__index img {
+    width: 160px;
+}
+
+// BRAND NAV (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .brand--large {
+        height: 100px;
+    }
+
+    .brand__logo--large {
+        width: 240px;
+        height: 60px;
+        margin: 20px auto;
+    }
+
+    .brand__logo--large img {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .brand--large {
+        height: 60px;
+    }
+
+    .brand__logo--large {
+        width: 160px;
+        height: 40px;
+        margin: 10px auto;
+    }
+
+    .brand__logo--large img {
+        width: 160px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .brand__logo,
+    .brand__logo img,
+    .brand__logo--large,
+    .brand__logo--large img {
+        display: none;
+        visibility: hidden;
+    }
+
+    .brand__index {
+        display: block;
+        visibility: visible;
+    }
+}

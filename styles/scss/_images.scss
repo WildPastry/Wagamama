@@ -1,0 +1,135 @@
+//IMPORT PARTIALS
+@import 'variables';
+@import 'mixins';
+
+// BACKGROUNDS
+#background {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+// BACKGROUNDS -- START & PAY PAGES
+.background__start {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/start/start-bg.jpg) no-repeat center center fixed;
+}
+
+.background__pay {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/pay/pay-bg.jpg) no-repeat center center fixed;
+}
+
+// BACKGROUNDS -- SOLID COLOURS
+.background__solid--blk {
+    background-color: $blk;
+}
+
+.background__solid--red {
+    background-color: $red;
+}
+
+.background__solid--pch {
+    background-color: $pch;
+}
+
+.background__solid--grn {
+    background-color: $grn;
+}
+
+// SLIDESHOW
+#slide1,
+#slide2,
+#slide3,
+#slide4,
+#slide5 {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slide__1 {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/slide/slide1.jpg) no-repeat center center fixed;
+}
+
+.slide__2 {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/slide/slide2.jpg) no-repeat center center fixed;
+}
+
+.slide__3 {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/slide/slide3.jpg) no-repeat center center fixed;
+}
+
+.slide__4 {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/slide/slide4.jpg) no-repeat center center fixed;
+}
+
+.slide__5 {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/slide/slide5.jpg) no-repeat center center fixed;
+}
+
+// ORDER PAGE IMAGES
+.col__img--drinks {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/order/drinks.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.col__img--starters {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/order/starters.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.col__img--mains {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/order/mains.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.col__img--desserts {
+    background: linear-gradient(to right, $blk-t, $blk-t), url(../../images/order/desserts.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+// IMAGE OVERLAY HOVER
+.overlay {
+    position: relative;
+}
+
+.overlay:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .2s ease-out .1s;
+}
+
+.overlay--strong:after {
+    border-radius: 20px;
+    border: 2px solid $red;
+}
+
+.overlay:hover:after {
+    opacity: .2;
+}
+
+.overlay--strong:hover:after {
+    opacity: 0.8;
+}
+
+.overlay--red:after {
+    background-color: $red;
+}
+
+.overlay--black:after {
+    background-color: $blk;
+}

@@ -1,0 +1,201 @@
+//IMPORT PARTIALS
+@import 'variables';
+@import 'mixins';
+
+//CSS RESETS
+* {
+    @include reset(0, 0, border-box, none, none);
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+// HTML
+html,
+body {
+    height: 100%;
+}
+
+//SELECTION
+::selection {
+    background: $pch;
+}
+
+::-moz-selection {
+    background: $pch;
+}
+
+// TYPOGRAPHY
+P {
+    @include fontProperties($font-lgt, $bdy, $spc-zero, $blk);
+}
+
+h1,
+h2 {
+    @include fontProperties($font-lgt, $hdg, $spc, $wht);
+}
+
+h3 {
+    @include fontProperties($font-lgt, $hdg-3, $spc, $blk);
+}
+
+h4 {
+    @include fontProperties($font-med, $hdg-4, $spc, $wht);
+}
+
+h5 {
+    @include fontProperties($font-lgt, $hdg-5, $spc, $blk);
+}
+
+h6 {
+    @include fontProperties($font-lgt, $hdg-5, $spc, $wht);
+}
+
+li p {
+    @include fontProperties($font-reg, $bdy, $spc, $blk);
+}
+
+li h5 {
+    @include fontProperties($font-lgt, $hdg-5, $spc, $blk);
+}
+
+// TRANSITIONS
+h1,
+h2,
+h3,
+h4,
+i,
+a,
+svg,
+input,
+.btn {
+    @include transitions($speed, $speed, $speed, $speed);
+}
+
+// TYPOGRAHPY (MEDIA)
+@media screen and (max-width: 900px) {
+
+    h2,
+    h4 {
+        font-size: $hdg-tab;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    h1,
+    h2,
+    h4 {
+        font-size: $hdg-mob;
+    }
+
+    h5,
+    h6 {
+        font-size: $bdy;
+    }
+
+    li
+        {
+        font-size: $bdy-mob;
+    }
+}
+
+// FLOATS
+.float--left {
+    float: left;
+}
+
+.float--left:after {
+    clear: left;
+}
+
+.float--right {
+    float: right;
+}
+
+.float--right:after {
+    clear: right;
+}
+
+// MARGINS
+.margin__top {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.margin__top--large {
+    margin-top: 20px;
+}
+
+.margin__bottom {
+    margin-bottom: 10px;
+}
+
+.margin__bottom--large {
+    margin-bottom: 20px;
+}
+
+.margin__side {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+// ALIGN
+.align {
+    text-align: center;
+}
+
+// BORDERS
+.border {
+    margin-top: 20px;
+    text-align: center;
+    border-radius: $radius-lrg;
+    padding: 20px;
+}
+
+// MENU PAGE TEXT BORDER
+.border__text {
+    width: 180px;
+    height: 50px;
+    border: $lgry;
+    text-align: center;
+    border-radius: 10px;
+    padding: 11px;
+    z-index: 10;
+}
+
+// MENU PAGE TEXT BORDER (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .border__text {
+        height: 45px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .border__text {
+        height: 40px;
+    }
+}
+
+// RULERS
+.ruler {
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+    height: 2px;
+    border: none;
+}
+
+.ruler--grey {
+    background-color: $gry;
+    margin: 0;
+}
+
+.ruler--peach {
+    background-color: $pch;
+}

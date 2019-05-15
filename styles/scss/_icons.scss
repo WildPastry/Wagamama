@@ -1,0 +1,396 @@
+//IMPORT PARTIALS
+@import 'variables';
+@import 'mixins';
+
+// ICONS -- MAIN
+svg {
+    opacity: 1;
+    width: 220px;
+    height: 220px;
+}
+
+svg:hover {
+    opacity: 0.6;
+}
+
+// ICONS -- MAIN (MEDIA)
+@media screen and (max-width: 900px) {
+
+    svg {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    svg {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    svg {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+// ICONS -- BRAND STAR
+.brand__star svg {
+    opacity: 1;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+}
+
+.brand__star:hover svg {
+    opacity: 0.6;
+}
+
+// BRAND STAR (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .brand__star svg {
+        width: 300px;
+        height: 300px;
+        margin-left: -150px;
+        margin-top: -150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .brand__star svg {
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        margin-top: -100px;
+    }
+}
+
+// ICONS -- NAV BRAND
+.brand i {
+    color: $wht;
+    font-size: 50px;
+}
+
+.brand__icons {
+    max-width: $main-wdth;
+    margin: $main-mar;
+}
+
+// BACK
+.fa-arrow-circle-left {
+    margin-top: 43px;
+    margin-left: 14%;
+    float: left;
+}
+
+.fa-arrow-circle-left::after {
+    clear: left;
+}
+
+// SERVER
+.fa-user-ninja {
+    margin-top: 43px;
+    margin-left: 25px;
+    float: left;
+}
+
+.fa-user-ninja:hover,
+.fa-arrow-circle-left:hover {
+    color: $pch;
+}
+
+// CART
+.fa-shopping-cart {
+    margin-top: 43px;
+    margin-right: 14%;
+    float: right;
+    position: relative;
+}
+
+.fa-shopping-cart::after {
+    clear: right;
+}
+
+.fa-shopping-cart:hover {
+    color: $grn;
+}
+
+// ICONS -- NAV BRAND SMALL
+.brand--small i {
+    font-size: 25px;
+    margin-top: 21px;
+}
+
+// ICONS -- NAV BRAND (MEDIA)
+@media screen and (max-width: 900px) {
+
+    .brand i {
+        font-size: 40px;
+    }
+
+    .fa-arrow-circle-left {
+        margin-top: 38px;
+        margin-left: 10%;
+    }
+
+    .fa-user-ninja {
+        margin-top: 38px;
+        margin-left: 20px;
+    }
+
+    .fa-shopping-cart {
+        margin-top: 38px;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .brand i {
+        font-size: 25px;
+    }
+
+    .fa-arrow-circle-left {
+        margin-top: 21px;
+        margin-left: 5%;
+    }
+
+    .fa-user-ninja {
+        margin-top: 21px;
+        margin-left: 15px;
+    }
+
+    .fa-shopping-cart {
+        margin-top: 21px;
+        margin-right: 5%;
+    }
+}
+
+// ICONS -- NAV BRAND TINY
+.brand__tiny svg {
+    width: 36px;
+    height: 36px;
+    display: none;
+    visibility: hidden;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    margin-left: -17px;
+    margin-top: 15px;
+}
+
+.brand__tiny svg path:hover {
+    fill: $pch;
+}
+
+// ICONS -- NAV BRAND TINY (MEDIA)
+@media screen and (max-width: 400px) {
+
+    .brand__tiny svg {
+        display: block;
+        visibility: visible;
+    }
+}
+
+// ICONS -- FILL COLOURS
+.icon--black {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: $blk;
+}
+
+.icon--red {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: $red;
+}
+
+.icon--peach {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: $pch;
+}
+
+.icon--green {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: $grn;
+}
+
+.icon--white {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: $wht;
+}
+
+// ICONS -- STROKE COLOURS
+.icon--white--stroke {
+    fill: none;
+    stroke: $wht;
+    stroke-miterlimit: 10;
+    stroke-width: 4px;
+}
+
+// ICONS -- MENU PAGE CONTROLS
+.control--pad {
+    padding: 5px;
+}
+
+// LEFT
+.control--left svg {
+    margin-top: 6px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.control--left::after svg {
+    clear: left;
+}
+
+// RIGHT
+.control--right svg {
+    margin-top: 6px;
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+.control--right::after svg {
+    clear: right;
+}
+
+// LEFT & RIGHT HOVER
+.control--right svg:hover,
+.control--left svg:hover {
+    opacity: 1;
+}
+
+.control--right:hover svg path,
+.control--left:hover svg path {
+    fill: $red;
+}
+
+// ICONS -- PAYMENT PAGES
+.container__pay svg {
+    opacity: 1;
+}
+
+// ICONS -- POP-UP PAGES
+.pop {
+    display: flex;
+    justify-content: center;
+}
+
+.pop .fa-user-ninja {
+    margin: 0;
+}
+
+// STAR REVIEW
+fieldset,
+label {
+    margin: 0;
+    padding: 0;
+}
+
+.rating {
+    border: none;
+    float: left;
+    width: 100%;
+}
+
+.rating>input {
+    display: none;
+}
+
+.rating>label:before {
+    margin: 10px;
+    font-size: 4em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating>.half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating>label {
+    color: $wht;
+    float: right;
+}
+
+.rating>input:checked~label,
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: #FFD700;
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+.rating>input:checked~label:hover~label {
+    color: #FFED85;
+}
+
+.review {
+    font-family: $font-reg;
+    color: $blk;
+    display: block;
+    resize: none;
+    width: 400px;
+    height: 150px;
+    padding: 10px;
+    margin: 15px auto;
+}
+
+// STAR REVIEW MEDIA
+@media screen and (max-width: 900px) {
+
+    .rating>input {
+        display: none;
+    }
+
+    .rating>label:before {
+        margin: 7px;
+        font-size: 3em;
+    }
+
+    .review {
+        width: 350px;
+        height: 150px;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .rating>input {
+        display: none;
+    }
+
+    .rating>label:before {
+        margin: 5px;
+        font-size: 2em;
+    }
+
+    .review {
+        width: 250px;
+        height: 150px;
+        padding: 10px;
+        margin: 10px auto;
+    }
+}
